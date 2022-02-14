@@ -1,0 +1,210 @@
+//Grid content
+.container
+	width: 100%
+	max-width: calc( 120.5rem + 2 * $gap )
+	margin-left: auto
+	margin-right: auto
+	padding-left: $gap
+	padding-right: $gap
+
+.row
+	margin-left: - $gap
+	margin-right: - $gap
+
+.grid
+	display: grid
+	gap: $gap
+	>*
+		min-width: 0
+	&.col-12
+		grid-template-columns: repeat(12, 1fr)
+	&.col-11
+		grid-template-columns: repeat(11, 1fr)
+	&.col-10
+		grid-template-columns: repeat(10, 1fr)
+	&.col-9
+		grid-template-columns: repeat(9, 1fr)
+	&.col-8
+		grid-template-columns: repeat(8, 1fr)
+	&.col-7
+		grid-template-columns: repeat(7, 1fr)
+	&.col-6
+		grid-template-columns: repeat(6, 1fr)
+	&.col-5
+		grid-template-columns: repeat(5, 1fr)
+	&.col-4
+		grid-template-columns: repeat(4, 1fr)
+	&.col-3
+		grid-template-columns: repeat(3, 1fr)
+	&.col-2
+		grid-template-columns: repeat(2, 1fr)
+	&.col-1
+		grid-template-columns: repeat(1, 1fr)
+
+.span
+	&-12
+		grid-column: span 12
+	&-11
+		grid-column: span 11
+	&-10
+		grid-column: span 10
+	&-9
+		grid-column: span 9
+	&-8
+		grid-column: span 8
+	&-7
+		grid-column: span 7
+	&-6
+		grid-column: span 6
+	&-5
+		grid-column: span 5
+	&-4
+		grid-column: span 4
+	&-3
+		grid-column: span 3
+	&-2
+		grid-column: span 2
+	&-1
+		grid-column: span 1
+
+.flex
+	display: flex
+	&_fw
+		flex-wrap: wrap
+	&_aic
+		align-items: center
+	&_jcc
+		justify-content: center
+	&_jcsb
+		justify-content: space-between
+
+.xl-none
+	display: none
+
+.xl-block
+	display: block
+
+.md-block, .sm-block
+	display: none
+
+@media only screen and (max-width: 992px)
+	.grid
+		&.col
+			&-md-12
+				grid-template-columns: repeat(12, 1fr)
+			&-md-11
+				grid-template-columns: repeat(11, 1fr)
+			&-md-10
+				grid-template-columns: repeat(10, 1fr)
+			&-md-9
+				grid-template-columns: repeat(9, 1fr)
+			&-md-8
+				grid-template-columns: repeat(8, 1fr)
+			&-md-7
+				grid-template-columns: repeat(7, 1fr)
+			&-md-6
+				grid-template-columns: repeat(6, 1fr)
+			&-md-5
+				grid-template-columns: repeat(5, 1fr)
+			&-md-4
+				grid-template-columns: repeat(4, 1fr)
+			&-md-3
+				grid-template-columns: repeat(3, 1fr)
+			&-md-2
+				grid-template-columns: repeat(2, 1fr)
+			&-md-1
+				grid-template-columns: repeat(1, 1fr)
+
+	.span
+		&-md
+			&-12
+				grid-column: span 12
+			&-11
+				grid-column: span 11
+			&-10
+				grid-column: span 10
+			&-9
+				grid-column: span 9
+			&-8
+				grid-column: span 8
+			&-7
+				grid-column: span 7
+			&-6
+				grid-column: span 6
+			&-5
+				grid-column: span 5
+			&-4
+				grid-column: span 4
+			&-3
+				grid-column: span 3
+			&-2
+				grid-column: span 2
+			&-1
+				grid-column: span 1
+
+	.md-block
+		display: block
+
+	.md-none, .xl-block
+		display: none
+
+@media only screen and (max-width: 767px)
+	.grid
+		&.col
+			&-sm-12
+				grid-template-columns: repeat(12, 1fr)
+			&-sm-11
+				grid-template-columns: repeat(11, 1fr)
+			&-sm-10
+				grid-template-columns: repeat(10, 1fr)
+			&-sm-9
+				grid-template-columns: repeat(9, 1fr)
+			&-sm-8
+				grid-template-columns: repeat(8, 1fr)
+			&-sm-7
+				grid-template-columns: repeat(7, 1fr)
+			&-sm-6
+				grid-template-columns: repeat(6, 1fr)
+			&-sm-5
+				grid-template-columns: repeat(5, 1fr)
+			&-sm-4
+				grid-template-columns: repeat(4, 1fr)
+			&-sm-3
+				grid-template-columns: repeat(3, 1fr)
+			&-sm-2
+				grid-template-columns: repeat(2, 1fr)
+			&-sm-1
+				grid-template-columns: repeat(1, 1fr)
+
+	.span
+		&-sm
+			&-12
+				grid-column: span 12
+			&-11
+				grid-column: span 11
+			&-10
+				grid-column: span 10
+			&-9
+				grid-column: span 9
+			&-8
+				grid-column: span 8
+			&-7
+				grid-column: span 7
+			&-6
+				grid-column: span 6
+			&-5
+				grid-column: span 5
+			&-4
+				grid-column: span 4
+			&-3
+				grid-column: span 3
+			&-2
+				grid-column: span 2
+			&-1
+				grid-column: span 1
+
+	.sm-block
+		display: block
+
+	.sm-none, .xl-block
+		display: none

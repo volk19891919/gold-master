@@ -1,0 +1,44 @@
+// USER VARIABLES SECTION
+
+// Font
+$fontsize: 1.6rem // Body Font Size
+$lineheight: 1.65 // Document Line Height
+$userfont: Roboto, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Color
+$accent: #CEB785 // Accent Color
+$text: #080501 // Text Color
+$text-white: #E5DECF
+$dark-gold: #3E3728
+$middle-gold: #6F6247
+$warm-white: #E6DECF
+$medium-gold: #9A8861
+$medium-gray: #D3D1CC
+$gray: #F4F2EC
+$bg-inner: #F0EFEB
+
+// Padding, gap, margin
+$gap: 2rem
+$el-mb: 2rem
+
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/swiper/swiper-bundle'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff2')
+		// font-display: swap // Uncomment to initially display system fonts
+
+@include font('Roboto', normal, 400, '../fonts/Roboto-Regular.woff2')
+@include font('Roboto', normal, 500, '../fonts/Roboto-Medium.woff2')
+
+@include font('Inter', normal, 400, '../fonts/Inter-Regular.woff2')

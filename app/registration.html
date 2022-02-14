@@ -1,0 +1,72 @@
+<!--#set var="title" value="Регистрация | Золотой фотон" -->
+<!--#include virtual="/parts/header.html" -->
+
+	<section class="registration page-form">
+		<div class="container">
+			<h1 class="h1 page-form__title">Регистрация</h1>
+			<div class="page-form__desc">
+				<p>К участию в Евразийской Светотехнической Премии «Золотой Фотон» приглашаются юридические лица, должным образом зарегистрированные в стране ЕврАзЭС и работающие на светотехническом рынке.</p>
+				<p>Во избежание недобросовестных регистраций в номинациях и в целях проведения квалификационного отбора мы просим Вас пройти данную регистрацию и предоставить всю необходимую Организаторам информацию.</p>
+			</div>
+			<form class="page-form__wrapper max-600">
+				<div class="grid col-2 col-sm-1">
+					<label class="input-label">
+						<span class="input-label__title">Имя</span>
+						<input type="text" class="input input-required" placeholder="Алексей" required>
+						<span class="form-error">Заполните, пожалуйста, это поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-label__title">Отчество</span>
+						<input type="text" class="input" placeholder="Алексеевич">
+					</label>
+					<label class="input-label span-2 span-sm-1">
+						<span class="input-label__title">Фамилия</span>
+						<input type="text" class="input" placeholder="Алексеев">
+					</label>
+					<label class="input-label span-2 span-sm-1">
+						<span class="input-label__title">Наименование юридического лица</span>
+						<input type="text" class="input" placeholder="ООО “Ваша компания”">
+					</label>
+					<label class="input-label">
+						<span class="input-label__title">Электронная почта</span>
+						<input type="email" class="input input-required" placeholder="vashapochta@xyz.com" required>
+						<span class="form-error">Заполните, пожалуйста, это поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-label__title">Телефон</span>
+						<input type="text" class="input" placeholder="+ 123 123 456 78 45">
+					</label>
+					<label class="input-label">
+						<span class="input-label__title">Введите пароль (минимум 6 знаков)</span>
+						<input type="password" class="input input-password" placeholder="ХХХХХХХХ">
+						<button class="js-btn-password"></button>
+					</label>
+					<label class="input-label">
+						<span class="input-label__title">Подтвердите пароль</span>
+						<input type="password" class="input input-password" placeholder="ХХХХХХХХ">
+						<button class="js-btn-password"></button>
+					</label>
+				</div>
+
+				<footer class="page-form__footer">
+					<div class="flex flex_aic">
+						<button type="submit" class="btn btn-gold">Зарегистрироваться</button>
+						<div>
+							Уже зарегистрированы?
+							<a href="#" class="link">Войти</a>
+						</div>
+					</div>
+					<label class="check-label">
+						<input type="checkbox" checked>
+						<span class="check-label__text">Согласен с Политикой конфиденциальности</span>
+					</label>
+					<label class="check-label">
+						<input type="checkbox" checked>
+						<span class="check-label__text">Согласен с Публичной офертой</span>
+					</label>
+				</footer>
+			</form>
+		</div>
+	</section>
+
+<!--#include virtual="/parts/footer.html" -->

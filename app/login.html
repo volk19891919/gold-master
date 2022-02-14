@@ -1,0 +1,33 @@
+<!--#set var="title" value="Вход | Золотой фотон" -->
+<!--#include virtual="/parts/header.html" -->
+
+<section class="login page-form">
+	<div class="container">
+		<h1 class="h1 page-form__title">Вход</h1>
+		<form class="page-form__wrapper max-520">
+			<div class="grid col-2 col-sm-1">
+				<label class="input-label span-2 span-sm-1">
+					<span class="input-label__title">Электронная почта</span>
+					<input type="email" class="input input-required" placeholder="vashapochta@xyz.com" required>
+					<span class="form-error">Заполните, пожалуйста, это поле</span>
+				</label>
+				<label class="input-label span-2 span-sm-1">
+					<span class="input-label__title">Пароль <a href="#">Забыли пароль? </a></span>
+					<input type="password" class="input input-password" placeholder="ХХХХХХХХ">
+					<button class="js-btn-password"></button>
+				</label>
+			</div>
+
+			<footer class="page-form__footer">
+				<div class="flex flex_aic">
+					<button type="submit" class="btn btn-gold">Войти</button>
+					<div>
+						<a href="#" class="link">Зарегистрироваться</a>
+					</div>
+				</div>
+			</footer>
+		</form>
+	</div>
+</section>
+
+<!--#include virtual="/parts/footer.html" -->

@@ -1,0 +1,1334 @@
+// button
+.btn
+	font-weight: 500
+	font-size: 1.6rem
+	line-height: 1
+	text-decoration: none
+	border: none
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 1.5rem 4.4rem
+	border-radius: 2.5rem
+	&-gold
+		background: $accent
+		color: $text
+		&:hover
+			background: $dark-gold
+			color: $accent
+	&-dark-gold
+		background: $dark-gold
+		color: $accent
+		&:hover
+			background: $accent
+			color: $text
+	&-middle-gold
+		background: $middle-gold
+		color: $warm-white
+		&:hover
+			background: $warm-white
+			color: $dark-gold
+	&-border-min
+		font-size: 1rem
+		text-transform: uppercase
+		color: $dark-gold
+		background: transparent
+		padding: 1rem 1.6rem
+		border: 0.1rem solid $medium-gold
+		font-weight: 400
+		&:hover
+			color: #fff
+			background: $medium-gold
+	&-border
+		border: 0.1rem solid $middle-gold
+		color: $text
+		padding-top: 1.2rem
+		padding-bottom: 1.2rem
+		&:hover
+			color: $warm-white
+			background: $middle-gold
+	&-gray
+		padding: 1.2rem 3.2rem
+		color: $dark-gold
+		background: $medium-gray
+		&:hover
+			background: $middle-gold
+			color: $warm-white
+
+// form
+.input-label
+	position: relative
+	display: flex
+	flex-direction: column
+	font-weight: 400
+	&__title
+		font-size: 1.6rem
+		margin-bottom: 0.7rem
+		display: flex
+		>a
+			margin-left: auto
+			color: $middle-gold
+			text-decoration: none
+			&:hover
+				color: $accent
+
+.input, .textarea
+	width: 100%
+	font-size: 1.6rem
+	border-radius: 0.6rem
+	border: 0.1rem solid $dark-gold
+
+.input
+	height: 5.2rem
+	padding: 0.5rem 1.5rem
+	&:focus:invalid
+		border-color: #D21B10
+		&~
+			.form-error
+				visibility: visible
+				opacity: 1
+	&~.form-error
+		position: absolute
+		left: 0
+		top: 100%
+		margin-top: 0.7rem
+		opacity: 0
+		visibility: collapse
+		transition: 0.2s
+
+.textarea
+	height: 11rem
+	padding: 1.5rem
+	resize: none
+
+.form-error
+	font-size: 1.2rem
+	line-height: 1
+	color: #D21B10
+
+.i-close
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 0
+	width: 2.4rem
+	height: 2.4rem
+	border: none
+	background: url(../images/dist/icon/close.svg) no-repeat center
+	background-size: contain
+
+.js-spinner
+	display: flex
+	align-items: center
+	width: 6.5rem
+	.js-stepper
+		width: 2.5rem
+		height: 3.6rem
+		border: none
+		background: #fff
+		text-align: center
+		font-size: 1.6rem
+		font-weight: 400
+		margin: 0
+		-moz-appearance: textfield
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button
+			-webkit-appearance: none
+	button
+		width: 2rem
+		height: 3.6rem
+		border: none
+		background: #fff
+		font-size: 0
+		position: relative
+		padding: 0
+		&::before
+			content: ''
+			display: block
+			width: 0.7rem
+			height: 0.1rem
+			background: $accent
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			transition: 0.2s
+		&:hover
+			&::before, &::after
+				background: $middle-gold
+	.spinner-up
+		&::after
+			content: ''
+			display: block
+			width: 0.1rem
+			height: 0.7rem
+			background: $accent
+			position: absolute
+			left: 50%
+			top: 50%
+			transition: 0.2s
+			transform: translate(-50%, -50%)
+
+.js-btn-password
+	width: 2rem
+	height: 2rem
+	background: url(../images/dist/icon/eye.svg) no-repeat center
+	background-size: contain
+	position: absolute
+	right: 1.6rem
+	bottom: 0
+	transform: translateY(-1.6rem)
+	z-index: 2
+	border: none
+	&.off
+		background: url(../images/dist/icon/eye-off.svg) no-repeat center
+
+.link
+	color: $middle-gold
+	text-decoration: none
+	border-bottom: 0.1rem solid $middle-gold
+	font-weight: 500
+	line-height: 1.4
+	&:hover
+		color: $accent
+		border-color: transparent
+
+.check-label
+	display: flex
+	&__text
+		position: relative
+		font-size: 1.4rem
+		line-height: 1.3
+		padding-left: 3.2rem
+		min-height: 2.4rem
+		padding-top: 0.3rem
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 2.4rem
+			height: 2.4rem
+			background: url(../images/dist/icon/check-1.svg) no-repeat center
+			background-size: contain
+			transition: 0.2s
+	input
+		display: none
+		&:checked
+			&+.check-label__text
+				&::before
+					background: url(../images/dist/icon/check-1-checked.svg) no-repeat center
+					background-size: contain
+
+@media only screen and (min-width: 768px)
+	.check-label
+		&__text
+			padding-left: 4.2rem
+
+@media only screen and (min-width: 580px)
+	.js-spinner
+		button, .js-stepper
+			height: 2.4rem
+.header
+	background: $text
+	border-bottom: 0.1rem solid #3E3728
+	position: relative
+	z-index: 20
+	padding: 1rem 0
+	color: $accent
+	&__logo
+		width: 16.4rem
+		img
+			width: 100%
+	a
+		text-decoration: none
+
+	.burger
+		width: 4rem
+		height: 4rem
+		border-radius: 50%
+		padding: 1.3rem 0.8rem
+		background: $dark-gold
+		border: none
+		flex-shrink: 0
+		margin-left: auto
+		transition: 0.2s
+		position: relative
+		z-index: 10
+		span
+			display: block
+			width: 100%
+			height: 0.2rem
+			background: $accent
+			transition: 0.2s
+			&+span
+				margin-top: 0.4rem
+		&.active
+			background: transparent
+			span
+				&:nth-child(1)
+					transform: translate(0, 0.6rem) rotate(30deg)
+				&:nth-child(2)
+					opacity: 0
+				&:nth-child(3)
+					transform: translate(0, -0.6rem) rotate(-30deg)
+
+
+@media only screen and (max-width: 992px)
+	.main-menu
+		position: absolute
+		top: 0
+		right: 0
+		opacity: 0
+		visibility: collapse
+		transform: translateY(-100%)
+		background: $text
+		width: 36rem
+		height: 100vh
+		max-width: 100vh
+		padding: 12rem 1.5rem 6rem
+		transition: 0.2s
+		overflow-y: auto
+		&.active
+			transform: translateY(0%)
+			visibility: visible
+			opacity: 1
+		&__list
+			font-size: 1.8rem
+			line-height: 1.1
+			margin-left: 1.9rem
+			margin-bottom: 2.3rem
+			>li
+				&:not(:last-child)
+					border-bottom: 0.1rem solid rgb(62 55 40 / 20%)
+				>a
+					padding: 0.7rem 0
+					display: block
+			a
+				&:focus, &:hover
+					color: inherit
+	
+		.js-collapse__btn
+			position: relative
+			display: block
+			&::after
+				content: ''
+				display: block
+				width: 1.2rem
+				height: 0.8rem
+				background: url(../images/dist/icon/drop.svg) no-repeat center
+				background-size: contain
+				position: absolute
+				right: 1.7rem
+				top: 50%
+				transform: translateY(-50%) rotate(0)
+				transition: 0.2s
+			&.active
+				&::after
+					transform: translateY(-50%) rotate(-180deg)
+		.js-collapse__content
+			display: none
+			line-height: 1
+			a
+				color: $medium-gold
+				display: block
+				padding: 0.7rem 0 0.7rem 3rem
+	
+	.btn-user
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 1.6rem
+		font-weight: 500
+		line-height: 1
+		padding: 1.5rem
+		border: 0.1rem solid $dark-gold
+		color: $accent
+		border-radius: 2.5rem
+		margin-bottom: 2rem
+		&:hover
+			background: $accent
+			color: $text
+
+@media only screen and (max-width: 767px)
+	.main-menu
+		top: 6.1rem
+		position: fixed
+		height: calc(100% - 6.1rem)
+		padding-top: 2rem
+		width: 100%
+		&__list
+			margin-left: 0
+			line-height: 1.17
+
+@media only screen and (min-width: 993px)
+	.header
+		padding: 2rem 0
+
+	.main-menu
+		display: flex
+		align-items: center
+		flex-grow: 1
+		&__list
+			flex-grow: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 1.6rem
+			line-height: 1
+			>li
+				position: relative
+				margin: 0 1.5rem
+				>a
+					display: block
+					position: relative
+					&::after
+						content: ''
+						display: block
+						width: 0
+						height: 0
+						top: 100%
+						left: 50%
+						margin-top: 0.8rem
+						transform: translate(-50%, -50%)
+						transition: 0.2s
+						position: absolute
+						background: $warm-white
+						border-radius: 50%
+					&:hover
+						color: $warm-white
+						&::after
+							width: 0.6rem
+							height: 0.6rem
+				>ul
+					position: absolute
+					top: 100%
+					left: -2.5rem
+					z-index: 2
+					opacity: 0
+					visibility: collapse
+					transition: 0.2s
+					padding-top: 3.2rem
+					li
+						border-left: 0.1rem solid $dark-gold
+						border-right: 0.1rem solid $dark-gold
+						background: $text
+						padding: 0.75rem 1.7rem 0.75rem 3rem
+						font-size: 1.4rem
+						&:first-child
+							border-top: 0.1rem solid $dark-gold
+							padding-top: 2rem
+						&:last-child
+							border-bottom: 0.1rem solid $dark-gold
+							padding-bottom: 3rem
+						a
+							display: flex
+							align-items: center
+							position: relative
+							white-space: pre
+							padding-right: 1.3rem
+							&::before
+								content: ''
+								display: block
+								transition: 0.2s
+								width: 0
+								height: 0
+								margin-right: 0
+								background: $warm-white
+								border-radius: 50%
+							&:hover
+								color: $warm-white
+								padding-right: 0
+								&::before
+									width: 0.6rem
+									height: 0.6rem
+									margin-right: 0.7rem
+				&:hover
+					>a
+						color: $warm-white
+						&::after
+							width: 0.6rem
+							height: 0.6rem
+					>ul
+						opacity: 1
+						visibility: visible
+		
+		&__btns
+			display: flex
+			>*
+				&:not(:last-child)
+					margin-right: 2rem
+		.btn
+			padding: 1.2rem 3.2rem
+			font-size: 1.4rem
+	.btn-user
+		font-size: 0
+		width: 4rem
+		height: 4rem
+		border-radius: 50%
+		border: none
+		background: $dark-gold
+		display: flex
+		align-items: center
+		justify-content: center
+		&::before
+			content: ''
+			display: block
+			width: 1.8rem
+			height: 1.8rem
+			background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 15.75V14.25C15 13.4544 14.6839 12.6913 14.1213 12.1287C13.5587 11.5661 12.7956 11.25 12 11.25H6C5.20435 11.25 4.44129 11.5661 3.87868 12.1287C3.31607 12.6913 3 13.4544 3 14.25V15.75' stroke='%23CEB785' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 8.25C10.6569 8.25 12 6.90685 12 5.25C12 3.59315 10.6569 2.25 9 2.25C7.34315 2.25 6 3.59315 6 5.25C6 6.90685 7.34315 8.25 9 8.25Z' stroke='%23CEB785' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+			background-size: contain
+		&:hover
+			background: $accent
+			&::before
+				background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 15.75V14.25C15 13.4544 14.6839 12.6913 14.1213 12.1287C13.5587 11.5661 12.7956 11.25 12 11.25H6C5.20435 11.25 4.44129 11.5661 3.87868 12.1287C3.31607 12.6913 3 13.4544 3 14.25V15.75' stroke='%233E3728' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 8.25C10.6569 8.25 12 6.90685 12 5.25C12 3.59315 10.6569 2.25 9 2.25C7.34315 2.25 6 3.59315 6 5.25C6 6.90685 7.34315 8.25 9 8.25Z' stroke='%233E3728' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+				background-size: contain
+	.burger
+		display: none
+
+.video-block
+	position: relative
+	overflow: hidden
+	padding-bottom: 56.2%
+	border-radius: 2.8rem 0 0 0
+	video
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+
+.home-slider
+	border-radius: 2.8rem 0 0 0
+	overflow: hidden
+	padding-bottom: 1.4rem
+	&__nav
+		position: absolute
+		z-index: 5
+		bottom: 0
+		right: 1.5rem
+		display: flex
+		align-items: center
+	&__pagination
+		display: none
+
+.button-nav-type-1
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	border-radius: 50%
+	background: $medium-gold
+	border: 0.1rem solid rgba(99, 89, 67, 0.7)
+	width: 2.8rem
+	height: 2.8rem
+	flex-shrink: 0
+	opacity: 0.7
+	transition: 0.2s
+	&:hover
+		background: $dark-gold
+	&::before
+		content: ''
+		display: block
+		width: 1.6rem
+		height: 1.1rem
+		flex-shrink: 0
+	&:not(:last-child)
+		margin-right: 0.5rem
+
+.button-prev-type-1
+	&::before
+		background: url(../images/dist/icon/prev.svg) no-repeat center
+		background-size: contain
+
+.button-next-type-1
+	&::before
+		background: url(../images/dist/icon/next.svg) no-repeat center
+		background-size: contain
+
+@media only screen and (min-width: 768px)
+	.video-block
+		border-radius: 6rem 0 0 0
+	.home-slider
+		padding-bottom: 0
+		border-radius: 6rem 0 0 0
+		&__nav
+			bottom: 2rem
+	.button-nav-type-1
+		width: 4rem
+		height: 4rem
+		&:not(:last-child)
+			margin-right: 1rem
+		&::before
+			width: 2.3rem
+			height: 1.5rem
+
+@media only screen and (min-width: 993px)
+	.video-block
+		border-radius: 10rem 0 0 0
+	.home-slider
+		border-radius: 10rem 0 0 0
+		&__nav
+			bottom: 4.5rem
+			right: 10rem
+			background: rgba(8, 5, 1, 0.7)
+			border: 0.1rem solid #3E3728
+			border-radius: 0 0 4rem 0
+			padding: 2rem 5rem
+		&__pagination
+			display: flex
+			align-items: baseline
+			color: $warm-white
+			line-height: 1
+			font-size: 4rem
+			margin-right: 8rem
+			.swiper-pagination-total
+				font-size: 2.4rem
+				color: $accent
+	.button-nav-type-1
+		width: 4.6rem
+		height: 4.6rem
+		&::before
+			width: 2.6rem
+			height: 1.5rem
+
+.h2
+	font-family: Inter
+	font-size: 3.6rem
+	font-weight: 400
+	margin: 0
+
+@media only screen and (min-width: 768px)
+	.h2
+		font-size: 4.8rem
+
+@media only screen and (min-width: 993px)
+	.h2
+		font-size: 6.4rem
+
+.news-slider
+	padding-top: 7.3rem
+	margin-top: -3.3rem
+	position: relative
+	.swiper-button
+		top: 0
+		margin: 0
+	.swiper-button-next
+		right: 0
+	.swiper-button-prev
+		left: initial
+		right: 4.5rem
+
+.swiper-button
+	width: 3rem
+	height: 3rem
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	border: 0.1rem solid $medium-gold
+	padding: 0
+	&:hover
+		background: $warm-white
+	&::after
+		display: none
+	&::before
+		content: ''
+		display: block
+		width: 1.5rem
+		height: 0.8rem
+
+.swiper-button-prev
+	&::before
+		content: ''
+		background: url(../images/dist/icon/prev2.svg) no-repeat center
+		background-size: contain
+
+.swiper-button-next
+	&::before
+		content: ''
+		background: url(../images/dist/icon/next2.svg) no-repeat center
+		background-size: contain
+
+.news
+	font-size: 1.4rem
+	line-height: 1.3
+	display: flex
+	flex-direction: column
+	&__img
+		position: relative
+		width: 100%
+		padding-bottom: 91%
+		overflow: hidden
+		margin-bottom: 3.5rem
+		img
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: 3s
+		&:hover
+			img
+				transform: scale(1.1)
+		span
+			position: absolute
+			z-index: 2
+			bottom: 0
+			width: 100%
+			left: 0
+			background: rgba(62, 55, 40, 0.8)
+			height: 5.8rem
+			display: flex
+			align-items: center
+			justify-content: center
+			font-weight: 500
+			font-size: 1.8rem
+			text-transform: uppercase
+			color: $accent
+			line-height: 1
+			font-family: Inter
+			&::before, &::after
+				content: ''
+				display: block
+				width: 0.7rem
+				height: 0.7rem
+				border-radius: 50%
+				background: $accent
+			&::before
+				margin-right: 1rem
+			&::after
+				margin-left: 1rem
+	&__vertical
+		span
+			transform-origin: left top
+			transform: rotate(-90deg)
+			bottom: -6rem
+			height: 6rem
+			font-size: 3.6rem
+			width: calc( 100% - 3rem)
+			&::before, &::after
+				width: 1rem
+				height: 1rem
+			&::before
+				margin-right: 1.6rem
+			&::after
+				margin-left: 1.6rem
+	&__title
+		font-weight: 500
+		font-size: 1.8rem
+		line-height: 1.2
+		margin-bottom: 2rem
+		text-decoration: none
+		&:hover
+			color: $dark-gold
+			text-decoration: none
+	p
+		margin-bottom: 0.7rem
+		&:last-child
+			margin-bottom: 0
+	&__footer
+		display: flex
+		align-items: flex-end
+		padding-top: 5rem
+		justify-content: space-between
+		padding-bottom: 6rem
+		margin-top: auto
+	&__data
+		color: $dark-gold
+		font-size: 1.2rem
+		align-self: center
+
+@media only screen and (min-width: 768px)
+	.news-slider
+		padding-top: 5rem
+		margin: 0
+		.swiper-button-next
+			left: 4.5rem
+			right: initial
+		.swiper-button-prev
+			left: 0
+			right: initial
+		.swiper-slide
+			height: auto
+			display: flex
+	.news
+		&__footer
+			padding-top: 2rem
+			padding-bottom: 0
+@media only screen and (min-width: 993px)
+	.news-slider
+		padding-top: 0
+		.swiper-slide
+			width: 42rem
+			&:first-child
+				width: 39rem
+				.news
+					padding-left: 0
+			&:last-child
+				width: 39rem
+				.news
+					padding-right: 0
+					border-right: none
+	.news
+		padding: 0 3rem 3rem 3rem
+		border-bottom: 0.1rem solid $accent
+		border-right: 0.1rem solid $accent
+		&__footer
+			padding-top: 7rem
+
+.partners-gen
+	background: $accent
+	padding: 2rem 1rem
+	color: $text
+	text-decoration: none
+	display: flex
+	flex-direction: column
+	line-height: 1.3
+	font-size: 1.2rem
+	&__title
+		font-size: 1.4rem
+		line-height: 1.25
+		text-transform: uppercase
+		margin-bottom: 3rem
+	&__content
+		display: flex
+		align-items: flex-start
+		b
+			font-weight: 500
+	&__img
+		flex-shrink: 0
+		margin-right: 2rem
+		width: 6.5rem
+		filter: grayscale(1)
+		transition: 0.2s
+	&:hover
+		background: $gray
+		color: $text
+		.partners-gen__img
+			filter: grayscale(0)
+
+.partners-min
+	background: $accent
+	padding: 2rem 1.2rem
+	color: $text
+	text-decoration: none
+	display: flex
+	line-height: 1.3
+	font-size: 1.2rem
+	&__title
+		font-size: 1.2rem
+		line-height: 1.25
+		text-transform: uppercase
+		margin-bottom: 0.4rem
+	&__content
+		display: flex
+		flex-direction: column
+		b
+			font-weight: 500
+	&__img
+		flex-shrink: 0
+		margin-right: 4.5rem
+		width: 4rem
+		filter: grayscale(1)
+		transition: 0.2s
+	&:hover
+		background: $gray
+		color: $text
+		.partners-gen__img
+			filter: grayscale(0)
+
+.partners-slider
+	position: relative
+	padding-top: 7rem
+	margin-top: -3rem
+	z-index: 2
+	margin-right: -1.5rem
+	.swiper-slide
+		width: auto
+		height: 7.1rem
+		display: flex
+		align-items: center
+		img
+			max-height: 100%
+			filter: grayscale(1)
+			// filter: sepia(1)
+			transition: 0.2s
+	.swiper-button
+		position: absolute
+		top: 0
+		margin: 0
+		&-next
+			right: 1.5rem
+		&-prev
+			left: initial
+			right: 5.5rem
+	&_col-5
+		.swiper-slide
+			height: 5.1rem
+	.swiper-slide
+		&:hover
+			img
+				filter: grayscale(0)
+
+@media only screen and (min-width: 768px)
+	.partners-min
+		padding-left: 1rem
+		padding-right: 0.3rem
+		&__img
+			margin-right: 1rem
+	.partners-slider
+		margin-right: 0
+		.swiper-button
+			&-next
+				right: 0rem
+			&-prev
+				right: 4rem
+
+@media only screen and (min-width: 993px)
+	.partners-gen
+		padding: 4rem 6rem
+		font-size: 1.6rem
+		line-height: 1.3
+		&__title
+			margin-bottom: 4rem
+		&__content
+			align-items: initial
+		&__img
+			width: 13rem
+			margin-right: 3rem
+			display: flex
+			justify-content: center
+			align-items: center
+
+	.partners-min
+		padding: 4rem
+		&__img
+			width: 6.6rem
+			margin-right: 4rem
+		&__title
+			margin-bottom: 0.7rem
+			font-size: 1.4rem
+
+	.partners-slider
+		margin-bottom: -4rem
+		.swiper-button
+			display: none
+		.swiper-wrapper
+			width: 100%
+			max-width: 100%
+			flex-wrap: wrap
+			transform: translate3d(0px, 0px, 0px) !important
+		.swiper-slide
+			margin-bottom: 4rem
+		&_col-7
+			.swiper-slide
+				&:nth-child(7)
+					margin-right: 0 !important
+					justify-content: flex-end
+		&_col-5
+			.swiper-slide
+				margin-bottom: 3rem
+				&:nth-child(5)
+					margin-right: 0 !important
+					justify-content: flex-end
+
+.ceremony-car
+	margin-top: 5rem
+	position: relative
+	border-radius: 1.8rem 0 0 0
+	padding-bottom: 4rem
+	&__prev, &__next
+		position: absolute
+		bottom: 0
+		z-index: 5
+	.swiper-slide
+		width: auto
+		display: flex
+		height: 24rem
+		transition: 0.4s
+
+@media only screen and (max-width: 767px)
+	.ceremony-car
+		margin-right: -1.5rem
+		&__prev, &__next
+			background: $accent
+			border-color: $accent
+			opacity: 1
+			&:hover
+				background: $accent
+				opacity: 0.7
+		&__prev
+			right: 4.8rem
+		&__next
+			right: 1.5rem
+
+@media only screen and (min-width: 768px)
+	.ceremony-car
+		padding-bottom: 0
+		border-radius: 1.8rem 0 1.8rem 0
+		&__prev, &__next
+			bottom: 1.5rem
+			width: 3rem
+			height: 3rem
+		&__prev
+			left: initial
+			right: 4.5rem
+		&__next
+			right: 1.5rem
+		
+		.swiper-slide
+			height: 24.4rem
+
+@media only screen and (min-width: 993px)
+	.ceremony-car
+		margin-top: 10rem
+		border-radius: 3rem 0 3rem 0
+		&__prev, &__next
+			bottom: 1.5rem
+			width: 4.6rem
+			height: 4.6rem
+		&__prev
+			left: initial
+			right: 7.1rem
+		.swiper-slide
+			height: 42.2rem
+
+.nominations-item
+	position: relative
+	width: 100%
+	overflow: hidden
+	padding-bottom: 106.1%
+	&__img
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__title
+		position: absolute
+		left: 0
+		width: 100%
+		bottom: 0
+		z-index: 2
+		border-top: 0.1rem solid $accent
+		border-bottom: 0.1rem solid $accent
+		padding: 1.7rem
+		font-size: 1.8rem
+		font-weight: 500
+		line-height: 1
+		text-transform: uppercase
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		color: $accent
+		background: rgba(8, 5, 1, 0.8)
+		transition: 0.2s
+		font-family: Inter
+	&__icon
+		width: 0
+		margin-bottom: 0
+		font-size: 0
+		transition: 0.2s
+	&:hover
+		.nominations-item__icon
+			width: 6rem
+			margin-bottom: 1.8rem
+
+@media only screen and (min-width: 768px)
+	.nominations-item
+		&_big
+			.nominations-item__title
+				padding: 3.5rem 1.7rem
+@media only screen and (min-width: 993px)
+	.nominations-item
+		&_big
+			grid-row: span 2
+			.nominations-item__title
+				padding: 1.7rem
+		&__title
+			padding: 1.7rem
+
+.section-header
+	margin-bottom: 4rem
+
+@media only screen and (max-width: 768px)
+	.section-header
+		&__btn
+			position: absolute
+			bottom: 6rem
+			left: 1.5rem
+			right: 1.5rem
+
+@media only screen and (min-width: 768px)
+	.section-header
+		margin-bottom: 6rem
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+@media only screen and (min-width: 993px)
+	.section-header
+		margin-bottom: 8rem
+
+.js-tabs__content
+	display: none
+	&.active
+		display: block
+
+.winners-slider
+	position: relative
+	.swiper-button
+		position: absolute
+		top: 40%
+		&-prev
+			left: 1.5rem
+		&-next
+			right: 1.5rem
+
+.winners-item
+	position: relative
+	display: flex
+	flex-direction: column
+	&__img
+		position: relative
+		overflow: hidden
+		padding-bottom: 59.5%
+		img
+			top: 0
+			left: 0
+			position: absolute
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: 4s
+	&__text
+		background: #231F17
+		padding: 1.5rem
+		font-size: 1.4rem
+		line-height: 1.3
+		color: $accent
+	&__category
+		font-size: 1rem
+		line-height: 1
+		text-transform: uppercase
+		margin-bottom: 1.5rem
+		color: $medium-gold
+	&__title
+		margin-bottom: 0.3rem
+		text-decoration: none
+		&:hover
+			color: #fff
+	&:hover
+		.winners-item__img
+			img
+				transform: scale(1.1)
+
+@media only screen and (min-width: 768px)
+	.winners-item
+		&__text
+			padding: 2rem 10rem 2rem 2rem
+			font-size: 1.4rem
+		&__category
+			margin-bottom: 2rem
+		&__title
+			font-size: 2rem
+			margin-bottom: 0.5rem
+
+	.winners-slider
+		.swiper-button
+			top: initial
+			bottom: 2rem
+			&-prev
+				left: initial
+				right: 6rem
+			&-next
+				right: 2rem
+
+@media only screen and (min-width: 993px)
+	.winners-item
+		&__category
+			margin-bottom: 1.5rem
+
+.jury-item
+	display: flex
+	flex-direction: column
+	color: $medium-gold
+	font-size: 1.4rem
+	line-height: 1.3
+	transition: 0.2s
+	text-decoration: none
+	&__img
+		overflow: hidden
+		position: relative
+		padding-bottom: 112%
+		margin-bottom: 2.6rem
+		transition: 0.2s
+		filter: grayscale(1)
+		img
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__name
+		color: $accent
+		font-size: 1.8rem
+		margin-bottom: 1.2rem
+		transition: 0.2s
+	&__text
+		margin-bottom: 0.6rem
+		opacity: 0.8
+		transition: 0.2s
+		&:last-child
+			margin-bottom: 0
+	&__country
+		opacity: 0.8
+		transition: 0.2s
+	&:hover
+		color: #fff
+		.jury-item__img
+			filter: grayscale(0)
+			border-radius: 0 4rem 0 0
+		.jury-item__name
+			color: #fff
+		p, .jury-item__country
+			opacity: 1
+
+@media only screen and (max-width: 767px)
+	.jury-item
+		min-width: 70vw
+
+.arrow-link
+	display: block
+	font-size: 1.6rem
+	line-height: 1.4
+	color: $warm-white
+	text-decoration: none
+	position: relative
+	padding: 1rem 2rem 1rem 0
+	border-bottom: 0.1rem solid $dark-gold
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		right: 0
+		top: 1.5rem
+		width: 1.3rem
+		height: 1.3rem
+		background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 8.74032e-05C12.5523 8.76561e-05 13 0.447803 13 1.00009L13 10.0001C13 10.5524 12.5523 11.0001 12 11.0001C11.4477 11.0001 11 10.5524 11 10.0001L11 2.00009L3.00004 2.00009C2.44775 2.00009 2.00004 1.55237 2.00004 1.00009C2.00003 0.447803 2.44775 8.71924e-05 3.00003 8.75296e-05L12 8.74032e-05ZM0.686326 10.8996L11.2929 0.29298L12.7071 1.70719L2.10054 12.3138L0.686326 10.8996Z' fill='%23E6DECF'/%3E%3C/svg%3E")
+		background-repeat: no-repeat
+		background-size: contain
+		transition: 0.2s
+	&:hover
+		color: $middle-gold
+		border-color: $middle-gold
+		&::after
+			background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 8.74032e-05C12.5523 8.76561e-05 13 0.447803 13 1.00009L13 10.0001C13 10.5524 12.5523 11.0001 12 11.0001C11.4477 11.0001 11 10.5524 11 10.0001L11 2.00009L3.00004 2.00009C2.44775 2.00009 2.00004 1.55237 2.00004 1.00009C2.00003 0.447803 2.44775 8.71924e-05 3.00003 8.75296e-05L12 8.74032e-05ZM0.686326 10.8996L11.2929 0.29298L12.7071 1.70719L2.10054 12.3138L0.686326 10.8996Z' fill='%236F6247'/%3E%3C/svg%3E")
+			background-repeat: no-repeat
+			background-size: contain
+
+.sticky
+	position: sticky
+	top: 0
+
+.back-link
+	display: inline-flex
+	align-items: center
+	color: $dark-gold
+	text-decoration: none
+	font-size: 1.4rem
+	line-height: 1.4
+	&::before
+		content: ''
+		display: block
+		width: 1.2rem
+		height: 1.2rem
+		background: url(../images/dist/icon/back.svg) no-repeat center
+		background-size: contain
+		margin-right: 1rem
+		position: relative
+		top: -0.1rem
+	&:hover
+		color: $accent
+
+.nomination-cart
+	background: $gray
+	position: relative
+	display: flex
+	flex-direction: column
+	font-size: 1.5rem
+	line-height: 1.3
+	&__img
+		position: relative
+		overflow: hidden
+		padding-bottom: 75.8%
+		img
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: 3s
+		&:hover
+			img
+				transform: scale(1.1)
+	&__title
+		text-decoration: none
+		margin: 2.5rem 1.5rem 0.5rem
+		font-size: 2rem
+		line-height: 1.2
+	&__teg
+		color: $medium-gold
+		font-size: 1.4rem
+		line-height: 1.2
+		padding: 0 1.5rem
+	p
+		padding: 1rem 1.5rem 0
+		margin-bottom: 0.5rem
+	.btn
+		margin: 2.5rem 1.5rem 0
+	&__footer
+		padding: 1.1rem 1.5rem 2.5rem
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 1.2rem
+		line-height: 1
+		color: $dark-gold
+
+.in-fav
+	font-size: 1.2rem
+	color: $dark-gold
+	display: flex
+	align-items: center
+	&::before
+		content: ''
+		width: 1.9rem
+		height: 2rem
+		margin-right: 0.4rem
+		background: url(../images/dist/icon/fav.svg) no-repeat center
+		background-size: cover
+
+.alert-ok
+	text-align: center
+	max-width: 500px
+	font-size: 1.8rem
+	line-height: 1.3
+	padding: 13vh 0
+	margin: 0 auto
+	display: none
+	&.active
+		display: block
+// @media only screen and (min-width: 768px)
+// @media only screen and (min-width: 993px)
