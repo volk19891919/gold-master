@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Заявки | Золотой фотон</title>
+	<meta name="description" content="#">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container flex flex_aic">
+			<a href="#" class="header__logo"><img src="images/dist/logo.svg" alt=""></a>
+			<nav class="header__menu main-menu">
+				<ul class="main-menu__list">
+					<li><a href="#">Премия</a></li>
+					<li><a href="#">Новости</a></li>
+					<li class="js-collapse">
+						<a href="#" class="js-collapse__btn">Номинации</a>
+						<ul class="js-collapse__content">
+							<li><a href="#">Проект года</a></li>
+							<li><a href="#">Продукт года</a></li>
+							<li><a href="#">Достижение года</a></li>
+							<li><a href="#">Признание отрасли</a></li>
+							<li><a href="#">СМИ года</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Жюри</a></li>
+					<li class="js-collapse">
+						<a href="#" class="js-collapse__btn">Победители</a>
+						<ul class="js-collapse__content">
+							<li><a href="#">Победитель 1</a></li>
+							<li><a href="#">Победитель 2</a></li>
+							<li><a href="#">Победитель 3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">СМИ</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="main-menu__btns">
+					<a href="#" class="btn-user">Зарегистрироваться</a>
+					<a href="#" class="btn btn-gold btn-popup" data-link="application">Подать заявку</a>
+				</div>
+			</nav>
+			<button class="burger"><span></span><span></span><span></span></button>
+		</div>
+	</header>
+
+	<section class="page-request-catalog page-p-100">
+		<div class="container">
+			<h1 class="h1 fs-80 center">Заявки</h1>
+
+			<div class="filter-header">
+	<button class="js-filter-btn">Фильтр</button>
+	<div class="sorting">
+		<div class="sorting__title">Сортировать</div>
+
+		<div class="js-select">
+			<button class="js-select__btn">Open</button>
+			<ul class="js-select__list">
+				<li class="active">
+					<label class="js-select__check">
+						<input type="radio">
+						<span>по рейтингу <i class="i-arrow-down"></i></span>
+					</label>
+				</li>
+				<li>
+					<label class="js-select__check">
+						<input type="radio">
+						<span>по рейтингу <i class="i-arrow-up"></i></span>
+					</label>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<form class="filter-search">
+		<input type="text" class="input-search" placeholder="поиск">
+		<button type="submit" class="btn-search">Поиск</button>
+	</form>
+</div>
+
+			<div class="page-companies__grid grid col-4 col-md-1">
+				<div class="aside-filter">
+					<button class="aside-filter__close">close</button>
+					<div class="filter">
+	<h3 class="filter__title">Выбрать категорию</h3>
+
+	<ul class="filter__list">
+		<li>
+			<label class="filter-check">
+				<input type="checkbox">
+				<span>Победители</span>
+			</label>
+		</li>
+		<li>
+			<label class="filter-check">
+				<input type="checkbox">
+				<span>Лауреаты</span>
+			</label>
+		</li>
+		<li>
+			<label class="filter-check">
+				<input type="checkbox">
+				<span>Номинанты</span>
+			</label>
+		</li>
+		<li>
+			<label class="filter-check">
+				<input type="checkbox">
+				<span>Все участники</span>
+			</label>
+		</li>
+	</ul>
+
+	<h3 class="filter__title">Выбрать год</h3>
+
+	<div class="filter-grid">
+		<label class="filter-check">
+			<input type="checkbox">
+			<span>2021</span>
+		</label>
+		<label class="filter-check">
+			<input type="checkbox">
+			<span>2021</span>
+		</label>
+		<label class="filter-check">
+			<input type="checkbox">
+			<span>2020</span>
+		</label>
+		<label class="filter-check">
+			<input type="checkbox">
+			<span>2020</span>
+		</label>
+		<label class="filter-check">
+			<input type="checkbox">
+			<span>2019</span>
+		</label>
+		<label class="filter-check filter-check_fs-13">
+			<input type="checkbox">
+			<span>Все годы</span>
+		</label>
+	</div>
+
+	<h3 class="filter__title">Выбрать номинацию</h3>
+
+	<div class="js-collapse filter-collapse">
+		<button class="js-collapse__btn filter-collapse__btn">Проект года</button>
+		<div class="js-collapse__content filter-collapse__content">
+			<ul class="filter__list">
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Все проекты в номинации</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для промышленных предприятий</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный улично -дорожный консольный светильник</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для административно-офисного освещения подвесной</span>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="js-collapse filter-collapse">
+		<button class="js-collapse__btn filter-collapse__btn">Продукт года</button>
+		<div class="js-collapse__content filter-collapse__content">
+			<ul class="filter__list">
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Все проекты в номинации</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для промышленных предприятий</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный улично -дорожный консольный светильник</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный прожектор</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для ЖКХ типа НПП/НПБ</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для административно-офисного освещения подвесной</span>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="js-collapse filter-collapse">
+		<button class="js-collapse__btn filter-collapse__btn">СМИ года</button>
+		<div class="js-collapse__content filter-collapse__content">
+			<ul class="filter__list">
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Все проекты в номинации</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для промышленных предприятий</span>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="js-collapse filter-collapse">
+		<button class="js-collapse__btn filter-collapse__btn">Достижение года</button>
+		<div class="js-collapse__content filter-collapse__content">
+			<ul class="filter__list">
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Все проекты в номинации</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для административно-офисного освещения подвесной</span>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="js-collapse filter-collapse">
+		<button class="js-collapse__btn filter-collapse__btn">Признание отрасли</button>
+		<div class="js-collapse__content filter-collapse__content">
+			<ul class="filter__list">
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный улично -дорожный консольный светильник</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный прожектор</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для ЖКХ типа НПП/НПБ</span>
+					</label>
+				</li>
+				<li>
+					<label class="filter-check filter-check_fs-13">
+						<input type="checkbox">
+						<span>Светодиодный светильник для административно-офисного освещения подвесной</span>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<button class="btn btn-filter-clean">Cбросить все фильтры</button>
+</div>
+				</div>
+				<div class="span-3 grid col-3 col-md-2 col-sm-1 company-cards">
+
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+					<div class="nomination-cart nomination-cart_bg-gray">
+	<a href="#" class="nomination-cart__img"><img src="images/dist/ncart.jpg" alt=""></a>
+	<a href="#" class="nomination-cart__title">Постоянная экспозиция «Вселенная Калевала»</a>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+	<p>Компания АНО «Центр культурного, социального и экологического проектирования «Гуманитарные дизайн-программы»</p>
+	<div class="nomination-cart__teg">Петрозаводск, Россия</div>
+
+	<p>Победитель, 2021</p>
+	<div class="nomination-cart__teg">Категория: “Проект года” <br>Номинация: «Внутреннее освещение музейно-выставочных пространств»</div>
+</div>
+
+					<div class="span-3 span-md-2 span-sm-1 flex">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link disabled" href="#">
+									<span class="pagination-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 17L6 12L11 7" stroke="#6F6247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 17L13 12L18 7" stroke="#6F6247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+								</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item active"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">4</a></li>
+							<li class="page-item"><a class="page-link" href="#">...</a></li>
+							<li class="page-item"><a class="page-link" href="#">15</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<span class="pagination-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17L18 12L13 7" stroke="#6F6247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 17L11 12L6 7" stroke="#6F6247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+								</a>
+							</li>
+						</ul>
+						<button type="button" class="items-more">Загрузить еще</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+<section class="partners">
+	<div class="container">
+		<div class="h2">Партнеры</div>
+
+		<div class="grid col-2 col-sm-1 partners__top">
+			<a href="#" class="partners-gen">
+				<span class="partners-gen__title">Генеральный партнер</span>
+				<span class="partners-gen__content">
+					<span class="partners-gen__img"><img src="images/dist/partners/marketE_1.svg" alt=""></span>
+					<span class="partners-gen__text">Первая в Евразийском Экономическом Союзе профессиональная отраслевая B2B онлайн площадка распродаж электротехнической и светотехнической продукции.</span>
+				</span>
+			</a>
+
+			<a href="#" class="partners-gen">
+				<span class="partners-gen__title">стратегический партнер</span>
+				<span class="partners-gen__content">
+					<span class="partners-gen__img"><img src="images/dist/partners/parame.svg" alt=""></span>
+					<span class="partners-gen__text"><b>Interlight Russia | Intelligent building Russia</b> - Международная выставка освещения, систем безопасности, автоматизации зданий и электротехник</span>
+				</span>
+			</a>
+		</div>
+
+		<div class="grid col-3 col-sm-1">
+			<a href="#" class="partners-min">
+				<span class="partners-min__img"><img src="images/dist/partners/beg.png" alt=""></span>
+				<span class="partners-min__content">
+					<span class="partners-min__title">партнер номинации </span>
+					<span class="partners-min__text">«Лучшие решения по управлению освещением»</span>
+				</span>
+			</a>
+			<a href="#" class="partners-min">
+				<span class="partners-min__img"><img src="images/dist/partners/beg.png" alt=""></span>
+				<span class="partners-min__content">
+					<span class="partners-min__title">партнер номинации </span>
+					<span class="partners-min__text">«Лучшие решения по управлению освещением»</span>
+				</span>
+			</a>
+			<a href="#" class="partners-min">
+				<span class="partners-min__img"><img src="images/dist/partners/beg.png" alt=""></span>
+				<span class="partners-min__content">
+					<span class="partners-min__title">партнер номинации </span>
+					<span class="partners-min__text">«Лучшие решения по управлению освещением»</span>
+				</span>
+			</a>
+		</div>
+
+		<div class="partners-wrapper">
+			<h3 class="h3">Партнеры</h3>
+
+			<div class="partners-slider partners-slider_col-7 swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl1.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl2.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl3.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl4.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl5.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl6.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl7.svg" alt=""></a></div>
+				</div>
+
+				<div class="swiper-button swiper-button-prev"></div>
+				<div class="swiper-button swiper-button-next"></div>
+			</div>
+		</div>
+
+		<div class="partners-wrapper">
+			<h3 class="h3">При поддержке</h3>
+
+			<div class="partners-slider partners-slider_col-7 swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl1.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl2.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl3.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl4.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl5.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl6.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl7.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl2.svg" alt=""></a></div>
+				</div>
+
+				<div class="swiper-button swiper-button-prev"></div>
+				<div class="swiper-button swiper-button-next"></div>
+			</div>
+		</div>
+
+		<div class="partners-wrapper">
+			<h3 class="h3">Информационные <br>партнеры</h3>
+
+			<div class="partners-slider partners-slider_col-5 swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl8.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl9.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl10.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl11.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl8.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl8.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl9.svg" alt=""></a></div>
+					<div class="swiper-slide"><a href="#"><img src="images/dist/partners/sl10.svg" alt=""></a></div>
+				</div>
+
+				<div class="swiper-button swiper-button-prev"></div>
+				<div class="swiper-button swiper-button-next"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container grid col-12">
+				<div class="footer__item-1 span-4">
+					<a href="#" class="footer__logo"><img src="images/dist/logo.svg" alt=""></a>
+					<div class="footer__contacts">
+						<a href="tel:+79997687230">+ 7 999-768-72-30</a>
+						<a href="mailto:info@light-award.ru">info@light-award.ru</a>
+					</div>
+					
+					<div class="soc">
+	<a href="#" class="soc-link" target="_blank"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.201172C6.71573 0.201172 0 6.9169 0 15.2012C0 23.4854 6.71573 30.2012 15 30.2012C23.2843 30.2012 30 23.4854 30 15.2012C30 6.9169 23.2843 0.201172 15 0.201172ZM16.5635 15.8601V24.0208H13.1869V15.8604H11.5V13.0481H13.1869V11.3596C13.1869 9.06542 14.1395 7.70117 16.8457 7.70117H19.0988V10.5137H17.6905C16.637 10.5137 16.5673 10.9068 16.5673 11.6402L16.5635 13.0478H19.1147L18.8162 15.8601H16.5635Z" fill="#9A8861"/>
+		</svg></a>
+	<a href="#" class="soc-link" target="_blank"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.201172C6.71573 0.201172 0 6.9169 0 15.2012C0 23.4854 6.71573 30.2012 15 30.2012C23.2843 30.2012 30 23.4854 30 15.2012C30 6.9169 23.2843 0.201172 15 0.201172ZM11.702 7.24951C12.5554 7.21067 12.8281 7.20117 15.0007 7.20117H14.9983C17.1716 7.20117 17.4433 7.21067 18.2966 7.24951C19.1483 7.28851 19.73 7.42334 20.24 7.62118C20.7666 7.82535 21.2116 8.09868 21.6567 8.54369C22.1017 8.98836 22.375 9.43469 22.58 9.96087C22.7767 10.4695 22.9117 11.0509 22.9517 11.9026C22.99 12.7559 23 13.0286 23 15.2013C23 17.3739 22.99 17.6459 22.9517 18.4993C22.9117 19.3506 22.7767 19.9321 22.58 20.441C22.375 20.967 22.1017 21.4133 21.6567 21.858C21.2121 22.303 20.7665 22.577 20.2405 22.7813C19.7315 22.9792 19.1495 23.114 18.2978 23.153C17.4444 23.1918 17.1726 23.2013 14.9998 23.2013C12.8272 23.2013 12.5547 23.1918 11.7014 23.153C10.8499 23.114 10.2684 22.9792 9.75936 22.7813C9.23352 22.577 8.78719 22.303 8.34268 21.858C7.89784 21.4133 7.62451 20.967 7.42 20.4408C7.22234 19.9321 7.0875 19.3508 7.04833 18.4991C7.00967 17.6458 7 17.3739 7 15.2013C7 13.0286 7.01 12.7557 7.04817 11.9024C7.0865 11.051 7.2215 10.4695 7.41984 9.9607C7.62484 9.43469 7.89818 8.98836 8.34318 8.54369C8.78785 8.09885 9.23419 7.82551 9.76036 7.62118C10.269 7.42334 10.8504 7.28851 11.702 7.24951Z" fill="#9A8861"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2831 8.64263C14.4225 8.64241 14.5724 8.64247 14.7341 8.64255L15.0008 8.64263C17.1368 8.64263 17.39 8.65029 18.2335 8.68863C19.0135 8.72429 19.4368 8.85463 19.7188 8.96413C20.0922 9.10913 20.3583 9.28247 20.6382 9.56247C20.9182 9.84247 21.0915 10.1091 21.2368 10.4825C21.3463 10.7641 21.4768 11.1875 21.5124 11.9675C21.5507 12.8108 21.559 13.0642 21.559 15.1992C21.559 17.3342 21.5507 17.5876 21.5124 18.4309C21.4767 19.2109 21.3463 19.6342 21.2368 19.9159C21.0918 20.2892 20.9182 20.5551 20.6382 20.8349C20.3582 21.1149 20.0923 21.2883 19.7188 21.4333C19.4372 21.5433 19.0135 21.6733 18.2335 21.7089C17.3901 21.7473 17.1368 21.7556 15.0008 21.7556C12.8646 21.7556 12.6114 21.7473 11.7681 21.7089C10.9881 21.6729 10.5647 21.5426 10.2826 21.4331C9.90923 21.2881 9.64256 21.1148 9.36256 20.8348C9.08256 20.5547 8.90922 20.2887 8.76389 19.9152C8.65438 19.6336 8.52388 19.2102 8.48838 18.4302C8.45005 17.5869 8.44238 17.3335 8.44238 15.1972C8.44238 13.0608 8.45005 12.8088 8.48838 11.9655C8.52405 11.1855 8.65438 10.7621 8.76389 10.4801C8.90889 10.1068 9.08256 9.84014 9.36256 9.56013C9.64256 9.28013 9.90923 9.1068 10.2826 8.96146C10.5646 8.85146 10.9881 8.72146 11.7681 8.68563C12.5061 8.65229 12.7921 8.64229 14.2831 8.64062V8.64263ZM19.2712 9.97097C18.7412 9.97097 18.3112 10.4005 18.3112 10.9306C18.3112 11.4607 18.7412 11.8907 19.2712 11.8907C19.8012 11.8907 20.2312 11.4607 20.2312 10.9306C20.2312 10.4006 19.8012 9.97064 19.2712 9.97064V9.97097ZM10.8924 15.201C10.8924 12.9322 12.7318 11.0927 15.0006 11.0926C17.2695 11.0926 19.1085 12.9322 19.1085 15.201C19.1085 17.4699 17.2696 19.3086 15.0008 19.3086C12.7319 19.3086 10.8924 17.4699 10.8924 15.201Z" fill="#9A8861"/>
+		<path d="M15.0007 12.5347C16.4734 12.5347 17.6674 13.7285 17.6674 15.2014C17.6674 16.674 16.4734 17.8681 15.0007 17.8681C13.5278 17.8681 12.334 16.674 12.334 15.2014C12.334 13.7285 13.5278 12.5347 15.0007 12.5347Z" fill="#9A8861"/>
+		</svg></a>
+	<a href="#" class="soc-link" target="_blank"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.201172C6.71573 0.201172 0 6.9169 0 15.2012C0 23.4854 6.71573 30.2012 15 30.2012C23.2843 30.2012 30 23.4854 30 15.2012C30 6.9169 23.2843 0.201172 15 0.201172ZM16.2214 19.9362C16.0735 20.0922 15.7847 20.1237 15.7847 20.1237H14.8284C14.8284 20.1237 12.7186 20.2481 10.86 18.3492C8.83321 16.2775 7.04349 12.1671 7.04349 12.1671C7.04349 12.1671 6.94019 11.8975 7.0521 11.7676C7.17809 11.6209 7.52164 11.6117 7.52164 11.6117L9.80749 11.5971C9.80749 11.5971 10.0227 11.6317 10.1769 11.7431C10.3044 11.8352 10.3756 12.0065 10.3756 12.0065C10.3756 12.0065 10.745 12.9237 11.2341 13.7533C12.1896 15.3734 12.6341 15.7275 12.9581 15.5539C13.4308 15.3012 13.2891 13.264 13.2891 13.264C13.2891 13.264 13.2977 12.525 13.0512 12.1955C12.8603 11.9405 12.5003 11.866 12.3414 11.8452C12.2123 11.8283 12.4236 11.5349 12.6975 11.4035C13.1091 11.2061 13.8353 11.1946 14.6938 11.203C15.3629 11.21 15.5554 11.2507 15.8168 11.3129C16.4234 11.4566 16.4045 11.9171 16.3636 12.9109C16.3514 13.2081 16.3372 13.5531 16.3372 13.9515C16.3372 14.041 16.3345 14.1365 16.3318 14.2347C16.3176 14.7438 16.3014 15.3269 16.6432 15.5439C16.8185 15.6545 17.2465 15.56 18.3178 13.7748C18.8257 12.9283 19.206 11.9336 19.206 11.9336C19.206 11.9336 19.2898 11.7561 19.4189 11.6801C19.5512 11.6025 19.7296 11.6263 19.7296 11.6263L22.1352 11.6117C22.1352 11.6117 22.8583 11.5264 22.9749 11.8475C23.0977 12.1832 22.7049 12.9683 21.722 14.2542C20.7896 15.4743 20.3359 15.9235 20.3775 16.3208C20.408 16.6111 20.7029 16.8737 21.2689 17.389C22.4504 18.4658 22.7671 19.0323 22.8432 19.1684C22.8495 19.1797 22.8541 19.188 22.8575 19.1934C23.3873 20.0561 22.2698 20.1237 22.2698 20.1237L20.1326 20.1529C20.1326 20.1529 19.674 20.242 19.0699 19.8348C18.7534 19.6218 18.4442 19.2737 18.1496 18.9422C17.6998 18.436 17.2843 17.9683 16.9296 18.0788C16.3341 18.2647 16.352 19.5237 16.352 19.5237C16.352 19.5237 16.3567 19.7934 16.2214 19.9362Z" fill="#9A8861"/>
+		</svg></a>
+</div>
+
+				</div>
+				<div class="footer__item-2 span-3">
+					<h4 class="footer__title">О премии</h4>
+					<ul class="footer__list">
+						<li><a href="#">О премии</a></li>
+						<li><a href="#">Как это работает?</a></li>
+						<li><a href="#">Оргкомитет премии</a></li>
+						<li><a href="#">Положение о премии</a></li>
+						<li><a href="#">Испытательные лаборатории</a></li>
+						<li><a href="#">Отзывы о премии</a></li>
+						<li><a href="#">Протоколы жюри</a></li>
+					</ul>
+				</div>
+				<div class="footer__item-3 span-3">
+					<h4 class="footer__title">Жюри</h4>
+					<ul class="footer__list">
+						<li><a href="#">Комитет по продуктам</a></li>
+						<li><a href="#">Комитет по проектам</a></li>
+						<li><a href="#">Комитет по бизнес-достижениям</a></li>
+					</ul>
+
+					<h4 class="footer__title">Победители и лауреаты</h4>
+					<ul class="footer__list footer__list-2">
+						<li><a href="#">2021</a></li>
+						<li><a href="#">2020</a></li>
+						<li><a href="#">2019</a></li>
+						<li><a href="#">2018</a></li>
+					</ul>
+				</div>
+				<div class="footer__item-4 span-1">
+					<button class="scroll-up"></button>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container flex flex_aic flex_jcsb">
+				<div class="footer__cop">2021 © Евразийская Премия по светотехнике и электротехнике “Золотой Фотон”</div>
+				<div class="footer__dev">Разработка сайта <a href="#" target="_blank">СВЕ.РУ</a></div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="popup" data-id="application">
+		<div class="popup__overlay"></div>
+		<div class="popup__wrapper">
+			<button class="btn-popup-close i-close"></button>
+			<header class="popup__header">
+				<h4 class="popup__title">Связаться с компанией</h4>
+			</header>
+			<form class="popup__form">
+				<label class="input-label">
+					<span class="input-label__title">Имя</span>
+					<input type="text" class="input input-required" placeholder="Алексей" required>
+					<span class="form-error">Заполните, пожалуйста, это поле</span>
+				</label>
+				<div class="grid col-2 col-sm-1">
+					<label class="input-label">
+						<span class="input-label__title">Электронная почта</span>
+						<input type="text" class="input input-required" placeholder="vashapochta@xyz.com" required>
+						<span class="form-error">Заполните, пожалуйста, это поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-label__title">Телефон</span>
+						<input type="text" class="input" placeholder="+ 123 123 456 78 45">
+					</label>
+				</div>
+				<label class="input-label">
+					<span class="input-label__title">Напишите ваше сообщение</span>
+					<textarea class="textarea" placeholder="Ваше сообщение"></textarea>
+				</label>
+
+				<button class="btn btn-gold submit">Отправить</button>
+			</form>
+		</div>
+	</div>
+	
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

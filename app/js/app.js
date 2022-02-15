@@ -19,10 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.main-menu').toggleClass('active');
 	});
 
+
+
 	$(".js-collapse__btn").click(function () {
 		$(this).toggleClass('active').siblings('.js-collapse .js-collapse__content').slideToggle();
 		return false;
 	});
+
+
 
 	$('ul.js-tabs__nav').on('click', 'li:not(.active)', function () {
 		$(this)
@@ -41,6 +45,54 @@ document.addEventListener('DOMContentLoaded', () => {
 		return false;
 	});
 
+
+
+	$(".btn-filter-clean").click(function () {
+		$(".filter input").prop('checked', false);
+		return false;
+	});
+
+	$(".js-filter-btn").click(function () {
+		$(".aside-filter").addClass('active');
+		return false;
+	});
+
+	$(".aside-filter__close").click(function () {
+		$(".aside-filter").removeClass('active');
+		return false;
+	});
+
+	$(document).on('mouseup', function (e) {
+		let filter = $('.aside-filter');
+		if (!filter.is(e.target) && filter.has(e.target).length === 0) {
+			filter.removeClass('active');
+		}
+	});
+
+
+
+	//Select
+	$(".js-select__btn").click(function () {
+		$(this).toggleClass('active').siblings('.js-select__list').toggleClass('active');
+		return false;
+	});
+
+	$(document).on('mouseup', function (e) {
+		let select = $('.js-select');
+		if (!select.is(e.target) && select.has(e.target).length === 0) {
+			$('.js-select__list').removeClass('active');
+			$('.js-select__btn').removeClass('active');
+		}
+	});
+
+	$('ul.js-select__list').on('click', 'li:not(.active)', function () {
+		$(this).addClass('active').siblings().removeClass('active');
+		$('.js-select__list').removeClass('active');
+		$('.js-select__btn').removeClass('active');
+	});
+
+
+
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 500) {
 			$('.scroll-up').fadeIn();
@@ -55,6 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		}, 600);
 		return false;
 	});
+
+
 
 	$('.btn-popup').click(function () {
 		$('.popup')
@@ -73,6 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.popup').removeClass('active');
 		$('body').removeClass('body-hidden')
 	});
+
+
 
 	const homeSlider = new Swiper(".home-slider", {
 		pagination: {

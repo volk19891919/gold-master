@@ -183,6 +183,10 @@
 	&.off
 		background: url(../images/dist/icon/eye-off.svg) no-repeat center
 
+.js-collapse
+	&__content
+		display: none
+
 .link
 	color: $middle-gold
 	text-decoration: none
@@ -202,6 +206,7 @@
 		padding-left: 3.2rem
 		min-height: 2.4rem
 		padding-top: 0.3rem
+		cursor: pointer
 		&::before
 			content: ''
 			display: block
@@ -1268,6 +1273,9 @@
 	flex-direction: column
 	font-size: 1.5rem
 	line-height: 1.3
+	&_bg-gray
+		background: $gray
+		padding-bottom: 3rem
 	&__img
 		position: relative
 		overflow: hidden
@@ -1288,6 +1296,8 @@
 		margin: 2.5rem 1.5rem 0.5rem
 		font-size: 2rem
 		line-height: 1.2
+		&:hover
+			color: $middle-gold
 	&__teg
 		color: $medium-gold
 		font-size: 1.4rem
@@ -1312,6 +1322,7 @@
 	color: $dark-gold
 	display: flex
 	align-items: center
+	text-decoration: none
 	&::before
 		content: ''
 		width: 1.9rem
@@ -1319,6 +1330,12 @@
 		margin-right: 0.4rem
 		background: url(../images/dist/icon/fav.svg) no-repeat center
 		background-size: cover
+		transition: 0.2s
+	&:hover
+		color: $dark-gold
+		&::before
+			background: url(../images/dist/icon/fav-dark.svg) no-repeat center
+			background-size: cover
 
 .alert-ok
 	text-align: center
@@ -1330,5 +1347,458 @@
 	display: none
 	&.active
 		display: block
+
+.h1
+	&.fs-80
+		font-family: Inter
+		line-height: 1
+		font-size: 4.8rem
+		margin-bottom: 6rem
+	&.center
+		text-align: center
+@media only screen and (min-width: 768px)
+	.h1
+		&.fs-80
+			font-size: 6.4rem
+@media only screen and (min-width: 992px)
+	.h1
+		&.fs-80
+			font-size: 8rem
+			margin-bottom: 8rem
+
+.filter-header
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 3rem
+	.sorting
+		margin-left: auto
+
+.filter-search
+	flex-grow: 1
+	position: relative
+	margin-top: 1.5rem
+	width: 100%
+	.btn-search
+		position: absolute
+		right: 1.5rem
+		top: 50%
+		transform: translateY(-50%)
+
+.input-search
+	width: 100%
+	height: 3.2rem
+	border: 0.1rem solid $dark-gold
+	padding: 0 3.5rem 0 1.5rem
+	font-size: 1.6rem
+	color: $medium-gold
+	border-radius: 2rem
+	background: transparent
+
+.btn-search
+	width: 2rem
+	height: 2rem
+	padding: 0
+	font-size: 0
+	border: none
+	background: url(../images/dist/icon/search.svg) no-repeat center
+	background-size: contain
+
+.js-filter-btn
+	display: flex
+	align-items: center
+	border: none
+	background: transparent
+	padding: 0
+	font-size: 1.6rem
+	color: $dark-gold
+	&::before
+		content: ''
+		width: 2rem
+		height: 2rem
+		margin-right: 1.5rem
+		background: url(../images/dist/icon/filter.svg) no-repeat center
+		background-size: contain
+
+.sorting
+	font-size: 1.6rem
+	color: $dark-gold
+	display: flex
+	align-items: center
+	&__title
+		display: none
+
+@media only screen and (min-width: 768px)
+	.filter-search
+		margin-top: 2rem
+	.sorting
+		&__title
+			display: block
+			margin-right: 1.5rem
+
+@media only screen and (min-width: 992px)
+	.js-filter-btn
+		display: none
+	.filter-header
+		margin-bottom: 4rem
+		flex-direction: row-reverse
+
+	.filter-search
+		margin-top: 0
+		width: 26.5rem
+		flex-grow: 0
+
+.i-arrow-down
+	display: block
+	width: 0.8rem
+	height: 1.1rem
+	background: url(../images/dist/icon/arrow-down.svg) no-repeat center
+	background-size: contain
+
+.i-arrow-up
+	display: block
+	width: 0.8rem
+	height: 1.1rem
+	background: url(../images/dist/icon/arrow-up.svg) no-repeat center
+	background-size: contain
+
+.js-select
+	position: relative
+	display: block
+	height: 3.4rem
+	z-index: 5
+	&__btn
+		position: absolute
+		z-index: 2
+		width: 100%
+		height: 100%
+		font-size: 0
+		background: transparent
+		padding: 0
+		border: none
+		&::before
+			content: ''
+			display: block
+			width: 2.4rem
+			height: 2.4rem
+			background: url(../images/dist/icon/select.svg) no-repeat center
+			background-size: contain
+			position: absolute
+			right: 1rem
+			top: 50%
+			transform: translateY(-50%) rotate(0deg)
+			transition: 0.2s
+		&.active
+			&::before
+				transform: translateY(-50%) rotate(-180deg)
+	&__list
+		position: relative
+		width: 100%
+		display: flex
+		flex-direction: column
+		li
+			visibility: collapse
+			opacity: 0
+			transition: 0.2s
+			font-size: 1.6rem
+			line-height: 1.4
+			&.active
+				order: -1
+				visibility: visible
+				opacity: 1
+		&.active
+			li
+				visibility: visible
+				opacity: 1
+	&__check
+		height: 3.4rem
+		display: flex
+		align-items: center
+		span
+			height: 3.4rem
+			white-space: pre
+			padding: 0.5rem 4rem 0.5rem 1rem
+			min-width: 17rem
+			display: flex
+			align-items: center
+			background: #fff
+			transition: 0.2s
+			cursor: pointer
+			&:hover
+				background: $warm-white
+				color: $dark-gold
+			i
+				margin-left: 1rem
+		input
+			display: none
+
+.company-card
+	background: #fff
+	padding: 0 2rem 2rem
+	display: flex
+	flex-direction: column
+	min-height: 34rem
+	&__status
+		display: flex
+		justify-content: flex-end
+	&__img
+		margin: 0 0 4rem
+		height: 9rem
+		transition: 0.2s
+		img
+			max-height: 100%
+	&__title
+		font-size: 2rem
+		line-height: 1.2
+		text-decoration: none
+		margin-bottom: 0.5rem
+	&__city
+		font-size: 1.4rem
+		line-height: 1.3
+	&__footer
+		padding-top: 0.5rem
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 1.2rem
+		line-height: 1.4
+		margin-top: auto
+	&:hover
+		color: $middle-gold
+		.company-card__img
+			filter: grayscale(1)
+		.company-card__title
+			color: $middle-gold
+
+.status
+	width: 4rem
+	height: 4.6rem
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+	font-size: 1.2rem
+	line-height: 1.2
+	padding: 0.2rem 0.1rem 0.1rem
+	margin-bottom: 2rem
+	color: $dark-gold
+	img
+		height: 3.1rem
+		width: auto
+		max-width: initial
+		flex-shrink: 0
+		margin-bottom: -0.1rem
+	&.bg-medium-gold
+		color: #fff
+
+.pagination
+	display: flex
+	align-items: center
+	font-size: 1.6rem
+	li
+		&:not(:last-child)
+			margin-right: 0.9rem
+	a
+		color: $middle-gold
+		text-decoration: none
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		min-width: 2rem
+		height: 2.6rem
+	.active
+		a
+			background: $warm-white
+			font-weight: 500
+
+.pagination-icon
+	width: 2.4rem
+	height: 2.4rem
+	display: flex
+	align-items: center
+	justify-content: center
+	svg
+		width: 100%
+	&:hover
+		path
+			transition: 0.2s
+			stroke: $warm-white
+
+.disabled
+	pointer-events: none
+	.pagination-icon
+		path
+			stroke: $warm-white
+
+.items-more
+	margin: 0 auto
+	border: none
+	background: transparent
+	padding: 0
+	font-size: 1.6rem
+	color: $dark-gold
+	display: inline-flex
+
+@media only screen and (max-width: 992px)
+	.page-companies
+		.pagination
+			display: none
+@media only screen and (min-width: 993px)
+	.items-more
+		display: none
+	
+.filter
+	color: $dark-gold
+	&__title
+		font-size: 1.8rem
+		text-transform: uppercase
+		line-height: 1
+		margin-bottom: 2.5rem
+		font-weight: 400
+	&__list
+		line-height: 1
+		&:not(:last-child)
+			margin-bottom: 3.5rem
+		li
+			&:not(:last-child)
+				margin-bottom: 1rem
+
+.filter-check
+	position: relative
+	display: flex
+	span
+		position: relative
+		font-size: 1.6rem
+		line-height: 1.4
+		padding-right: 3.7rem
+		display: flex
+		align-items: center
+		width: 100%
+		cursor: pointer
+		min-height: 2.2rem
+		&::before
+			content: ''
+			display: block
+			width: 1.8rem
+			height: 1.8rem
+			position: absolute
+			right: 0
+			top: 0.1rem
+			border: 0.1rem solid $dark-gold
+			transition: 0.2s
+	input
+		display: none
+		&:checked
+			&+span
+				&::before
+					background-color: $dark-gold
+					background-image: url(../images/dist/icon/check-2.svg)
+					background-repeat: no-repeat
+					background-position: center
+					background-size: 1rem 0.9rem
+	&_fs-13
+		span
+			font-size: 1.3rem
+			line-height: 1.3
+
+.filter-grid
+	display: grid
+	gap: 0.7rem 7rem
+	grid-template-columns: 1fr auto
+	margin-bottom: 3.5rem
+
+.filter-collapse
+	margin-bottom: 1rem
+	&__btn
+		border: none
+		padding: 0
+		font-size: 1.6rem
+		line-height: 1.4
+		position: relative
+		background: transparent
+		padding-right: 3.5rem
+		width: 100%
+		text-align: left
+		&::before
+			content: ''
+			display: block
+			width: 2.4rem
+			height: 2.4rem
+			background: url(../images/dist/icon/select.svg) no-repeat center
+			background-size: contain
+			position: absolute
+			right: -0.2rem
+			top: 50%
+			transform: translateY(-50%) rotate(0deg)
+			transition: 0.2s
+		&.active
+			&::before
+				transform: translateY(-50%) rotate(-180deg)
+	&__content
+		padding-top: 1rem
+
+.aside-filter
+	padding-right: 2rem
+	&__close
+		display: none
+
+.btn-filter-clean
+	margin-top: 3.5rem
+	width: 100%
+	font-size: 1.4rem
+	line-height: 1.3
+	font-weight: 400
+	padding: 0.8rem 2rem
+	background: $warm-white
+	&:hover
+		background: $medium-gold
+		color: $warm-white
+
+@media only screen and (max-width: 992px)
+	.aside-filter
+		position: fixed
+		max-height: 100%
+		overflow-y: auto
+		background: #000
+		box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.04)
+		background: $gray
+		padding: 4rem 2rem 3rem 3.4rem
+		z-index: 10
+		top: 0
+		left: 0
+		max-width: 36rem
+		width: 100%
+		transform: translateX(-100%)
+		transition: 0.2s
+		&.active
+			transform: translateX(0%)
+		&__close
+			display: block
+			width: 1.5rem
+			height: 1.5rem
+			top: 2rem
+			right: 2rem
+			background: transparent
+			padding: 0
+			border: none
+			position: absolute
+			font-size: 0
+			&::before, &::after
+				content: ''
+				display: block
+				width: 100%
+				height: 0.2rem
+				border-radius: 0.2rem
+				background: $dark-gold
+				position: absolute
+				left: 50%
+				top: 50%
+			&::before
+				transform: translate(-50%, -50%) rotate(40deg)
+			&::after
+				transform: translate(-50%, -50%) rotate(-40deg)
+
+@media only screen and (min-width: 768px)
+@media only screen and (min-width: 993px)
 // @media only screen and (min-width: 768px)
 // @media only screen and (min-width: 993px)
